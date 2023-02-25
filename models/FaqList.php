@@ -20,6 +20,9 @@ class FaqList extends Model
      * @var array Validation rules
      */
     public $rules = [
+        'title' => ['required'],
+        'category_id' => ['required'],
+        'content' => ['required'],
     ];
 
     public $belongsTo = [

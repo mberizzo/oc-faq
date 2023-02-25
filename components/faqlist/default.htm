@@ -1,0 +1,17 @@
+<p>Faq List:</p>
+
+<ul>
+    {% for category in faqCategories %}
+        <li>
+            {{ category.name }}
+            <ul>
+                {% for faq in category.questions %}
+                    <li>
+                        {{ faq.title }} <br>
+                        {{ faq.content|raw }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>

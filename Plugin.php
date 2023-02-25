@@ -15,6 +15,9 @@ class Plugin extends PluginBase
 
     public function registerComponents()
     {
+        return [
+            'Mberizzo\Faq\Components\FaqList' => 'faqList',
+        ];
     }
 
     public function registerSettings()
