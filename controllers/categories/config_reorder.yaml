@@ -1,0 +1,4 @@
+title: Categories
+modelClass: Mberizzo\Faq\Models\FaqCategory
+toolbar:
+    buttons: reorder_toolbar

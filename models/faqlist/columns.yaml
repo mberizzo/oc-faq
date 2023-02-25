@@ -1,0 +1,17 @@
+columns:
+    title:
+        label: Titulo
+        type: text
+        searchable: true
+    category_id:
+        label: Categoria
+        relation: category
+        select: name
+        searchable: true
+    is_active:
+        label: Activo
+        type: inetis-list-switch
+        icon: true
+    sort_order:
+        label: Orden
+        sortable: true

@@ -1,0 +1,10 @@
+name: Questions
+form: $/mberizzo/faq/models/faqlist/fields.yaml
+modelClass: Mberizzo\Faq\Models\FaqList
+defaultRedirect: mberizzo/faq/questions
+create:
+    redirect: 'mberizzo/faq/questions/update/:id'
+    redirectClose: mberizzo/faq/questions
+update:
+    redirect: mberizzo/faq/questions
+    redirectClose: mberizzo/faq/questions

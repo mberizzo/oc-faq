@@ -1,0 +1,20 @@
+fields:
+    title:
+        label: Titulo
+        span: left
+        required: 1
+        type: text
+    category_id:
+        label: Categoria
+        showSearch: true
+        span: right
+        placeholder: Seleccionar
+        required: 1
+        type: dropdown
+    content:
+        label: Contenido
+        size: large
+        span: full
+        required: 1
+        type: richeditor
+        toolbarButtons: bold|italic|formatOL|formatUL|insertLink|undo|redo|html|fullscreen

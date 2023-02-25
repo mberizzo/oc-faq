@@ -1,0 +1,14 @@
+columns:
+    name:
+        label: name
+        type: text
+        searchable: true
+        sortable: true
+    is_active:
+        label: Activo
+        type: inetis-list-switch
+        icon: true
+    sort_order:
+        label: Orden
+        sortable: true
+

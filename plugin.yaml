@@ -1,0 +1,30 @@
+plugin:
+    name: 'mberizzo.faq::lang.plugin.name'
+    description: 'mberizzo.faq::lang.plugin.description'
+    author: mberizzo
+    icon: oc-icon-question-circle
+    homepage: ''
+navigation:
+    main-menu-faq:
+        label: 'Preguntas Frecuentes'
+        url: mberizzo/faq/questions
+        icon: icon-question-circle
+        permissions:
+            - mberizzo.faq
+        sideMenu:
+            side-menu-faq-list:
+                label: Preguntas
+                url: mberizzo/faq/questions
+                icon: icon-question
+                permissions:
+                    - mberizzo.faq
+            side-menu-faq-categories:
+                label: Categorias
+                url: mberizzo/faq/categories
+                icon: icon-list
+                permissions:
+                    - mberizzo.faq
+permissions:
+    mberizzo.faq:
+        tab: 'mberizzo.faq::lang.plugin.name'
+        label: 'mberizzo.faq::lang.plugin.name'

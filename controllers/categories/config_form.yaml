@@ -1,0 +1,10 @@
+name: Categories
+form: $/mberizzo/faq/models/faqcategory/fields.yaml
+modelClass: Mberizzo\Faq\Models\FaqCategory
+defaultRedirect: mberizzo/faq/categories
+create:
+    redirect: 'mberizzo/faq/categories/update/:id'
+    redirectClose: mberizzo/faq/categories
+update:
+    redirect: mberizzo/faq/categories
+    redirectClose: mberizzo/faq/categories

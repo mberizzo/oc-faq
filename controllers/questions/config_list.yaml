@@ -1,0 +1,12 @@
+list: $/mberizzo/faq/models/faqlist/columns.yaml
+modelClass: Mberizzo\Faq\Models\FaqList
+title: Questions
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'mberizzo/faq/questions/update/:id'

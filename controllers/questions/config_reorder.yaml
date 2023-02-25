@@ -1,0 +1,5 @@
+title: Questions
+modelClass: Mberizzo\Faq\Models\FaqList
+nameFrom: title
+toolbar:
+    buttons: reorder_toolbar
