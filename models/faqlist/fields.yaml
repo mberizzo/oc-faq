@@ -17,4 +17,3 @@ fields:
         span: full
         required: 1
         type: richeditor
-        toolbarButtons: bold|italic|formatOL|formatUL|insertLink|undo|redo|html|fullscreen

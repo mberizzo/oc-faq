@@ -12,6 +12,7 @@ class BuilderTableCreateMberizzoFaqList extends Migration
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
             $table->string('title');
+            $table->string('slug');
             $table->text('content');
             $table->integer('category_id');
             $table->boolean('is_active')->default(true);

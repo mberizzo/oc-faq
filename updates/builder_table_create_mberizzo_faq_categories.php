@@ -12,6 +12,8 @@ class BuilderTableCreateMberizzoFaqCategories extends Migration
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
             $table->string('name');
+            $table->string('slug');
+            $table->string('description')->nullable();
             $table->string('icon');
             $table->boolean('is_active')->default(true);
             $table->integer('sort_order')->default(1);

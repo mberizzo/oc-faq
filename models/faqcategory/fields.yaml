@@ -12,4 +12,7 @@ fields:
         iconTypes: brands
         placeholder: 'Seleccionar'
         span: right
-
+    description:
+        label: Bajada
+        span: full
+        type: text
