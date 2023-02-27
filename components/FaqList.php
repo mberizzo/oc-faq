@@ -5,22 +5,38 @@ use Mberizzo\Faq\Models\FaqCategory;
 
 class FaqList extends ComponentBase
 {
-    public $faqCategories;
 
     public function componentDetails()
     {
         return [
             'name' => 'FaqList Component',
+            'description' => 'Listado de categorias con sus preguntas',
+        ];
+    }
+
+    public function defineProperties()
+    {
+        return [
+            'category_slug' => [
+                'title'       => 'Category slug',
+                'description' => 'Filtra la categoria por el slug',
+                'default'     => '{{ :slug }}',
+                'type'        => 'string',
+            ],
         ];
     }
 
     public function onRun()
     {
-        $this->faqCategories = FaqCategory::query()
-            ->where('is_active', 1)
-            ->with('questions')
-            ->get();
+        $faqCategories = FaqCategory::where('is_active', 1);
 
-        $this->page['faqCategories'] = $this->faqCategories;
+        if ($categorySlug = $this->properties['category_slug']) {
+            $faqCategories
+                ->where('slug', $categorySlug)
+                ->with('questions');
+        }
+
+        $this->page['faqCategories'] = $faqCategories->get();
+        $this->page['categorySlug'] = $categorySlug;
     }
 }

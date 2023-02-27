@@ -1,3 +1,6 @@
+## Usage
+
+```html
 <div class="container">
     <h2>
         <a href="{{ 'faq'|page({ slug: null }) }}">Preguntas Frecuentes:</a>
@@ -21,3 +24,4 @@
         {% endfor %}
     </ul>
 </div>
+```
