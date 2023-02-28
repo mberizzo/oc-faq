@@ -1,5 +1,8 @@
 <?php namespace Mberizzo\Faq;
 
+use Illuminate\Support\Facades\Event;
+use Mberizzo\Faq\Classes\FaqCategorySearchProvider;
+use Mberizzo\Faq\Classes\FaqSearchProvider;
 use System\Classes\PluginBase;
 
 class Plugin extends PluginBase
@@ -11,6 +14,7 @@ class Plugin extends PluginBase
     public $require = [
         'Inetis.ListSwitch',
         'GinoPane.AwesomeIconsList',
+        'OFFLINE.SiteSearch',
     ];
 
     public function registerComponents()
@@ -20,7 +24,10 @@ class Plugin extends PluginBase
         ];
     }
 
-    public function registerSettings()
+    public function boot()
     {
+        Event::listen('offline.sitesearch.extend', function () {
+            return [new FaqSearchProvider(), new FaqCategorySearchProvider()];
+        });
     }
 }
