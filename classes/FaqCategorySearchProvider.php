@@ -33,7 +33,7 @@ class FaqCategorySearchProvider extends ResultsProvider
 
     public function displayName()
     {
-        return 'Categoria';
+        return 'category';
     }
 
     public function identifier()

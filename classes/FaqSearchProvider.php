@@ -33,7 +33,7 @@ class FaqSearchProvider extends ResultsProvider
 
     public function displayName()
     {
-        return 'Pregunta';
+        return 'question';
     }
 
     public function identifier()
